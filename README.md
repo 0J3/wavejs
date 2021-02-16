@@ -2,31 +2,31 @@
 
 <a href="https://github.com/QiShaoXuan/wavejs/blob/master/README_en.md">English</a>
 
-# 波浪动画
+# Wave animation
 
-一个灵活的可配置的波浪动画
+a flexible ,configurable animation of wave
 
-<a href="https://qishaoxuan.github.io/wavejs/">简单的展示</a>
+<a href="https://qishaoxuan.github.io/wavejs/">simple demo</a>
 
-<a href="https://qishaoxuan.github.io/css_tricks/notCSS/wave.html">附代码的展示</a>
+<a href="https://qishaoxuan.github.io/css_tricks/notCSS/wave.html">demo has code</a>
 
 <a href="https://juejin.im/post/5c64ce6ef265da2d8c7db0df">教程</a>
 
-## 使用
+## How to use
 
-在实例化时接收两个参数
+Two parameters are received at instantiation time
 
-第一个参数：动画容器的选择器
+First params：the selector for the animation container
 
-第二个参数（可选）：[options](#options)
+Second parameter（optional）：[Options](#Options)
 
-#### 引用 `/dist/wave.es.js`
+#### import `/dist/wave.es.js`
 ```js
 import Wave from './dist/wave.es.js'
   
 const wave = new Wave('body')
 ```
-#### 引用 `/dist/wave.js`
+#### import `/dist/wave.js`
 ```html
 <script src="./dist/wave.js"></script>
 <script >
@@ -34,89 +34,87 @@ const wave = new Wave('body')
 </script>
 ```
 
-## 配置参数
+## API
 
 ### container
-类型：string
+Type: string
 
-默认值：--
+Default: --
 
-说明：动画容器的选择器
+Description: selector for the animation container
 
 ### options
 ### options.number 
-类型： number
+Type: number
 
-默认值：3
+Default:3
 
-说明：波浪个数（层数）
+Description: number of waves (number of layers)
 ### options.smooth 
-类型： number
+Type: number
 
-默认值：50
+Default: 50
 
-说明：平滑程度
+Description: smooth degree
 
 ### options.velocity  
-类型： number
+Type: number
 
-默认值：1
+Default:1
 
-说明：速度
+Description: speed of the animation
 ### options.height 
-类型： number
+Type: number
 
-默认值：.3
+Default:.3
 
-说明：波浪高度，可以是百分比，也可以是具体的高度
+Description: wave height can be either a percentage or a specific height
 ### options.colors
-类型： Array<{ hex: string, rgba: string }> 
+Type: Array<{ hex: string, rgba: string }> 
 
-默认值：`['#ff7657']`
+Default:`['#ff7657']`
 
-说明：每个波浪的颜色
+Description: color of every waves
 ### options.opacity 
-类型： number 
+Type: number 
 
-默认值：.5
+Default:.5
 
-说明：波浪的透明度
+Description: opacity of wave
 ### options.border.show
-类型： boolean
+Type: boolean
 
-默认值：true
+Default:true
 
-说明：是否显示边框
+Description: whether to display border or not
 ### options.border.width
-类型： number
+Type: number
 
-默认值：2
+Default:2
 
-说明：边框宽度
+Description: border width
 ### options.border.color
-类型： string[] 
+Type: string[] 
 
-默认值：`['']`
+Default:`['']`
 
-说明：边框颜色，默认为波浪颜色相同
+Description: border color, the default is the same as the wave color
 ### options.position
-类型： 'top' | 'bottom' | 'left' | 'right' 
+Type: 'top' | 'bottom' | 'left' | 'right' 
 
-默认值：`"bottom"`
+Default:`"bottom"`
 
-说明：波浪的位置
+Description: position of waves
 
-## 方法
+## methods
 
 ### `animate`
-开始动画
+start animation
 ### `pause`
-暂停动画
+pause animation
 ### `setOptions`
-设置参数，接收值与上述 `options` 相同
+set options
 ### `reset`
-重置动画，当容器大小变化时可用
+reset animation
 
-## TODO
-增加多个波浪（多个贝塞尔曲线连接）
 
